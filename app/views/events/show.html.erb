@@ -1,0 +1,10 @@
+<%= @event.title %>
+<%= @event.description %>
+<%= @event.date %>
+<%= @event.location %>
+
+<div>
+  <% @event.invitees.each do |x| %>
+    <%= x.username %>
+  <% end %>
+</div>

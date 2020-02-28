@@ -1,0 +1,22 @@
+<%= @user.username %>
+
+<div>
+  <b>Created events</b>
+  <% @user.created_events.each do |event| %>
+    <p><%= event.title %></p>
+  <% end %>
+</div>
+
+<div>
+  <b>Invited upcoming events</b>
+  <% @upcoming_events.each do |event| %>
+    <p><%= event.title %></p>
+  <% end %>
+</div>
+
+<div>
+  <b>Invited past events</b>
+  <% @previous_events.each do |event| %>
+    <p><%= event.title %></p>
+  <% end %>
+</div>

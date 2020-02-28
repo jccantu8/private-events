@@ -1,0 +1,15 @@
+<h1>All Events</h1>
+
+<div>
+  <b>Future Events</b>
+  <% @futureevents.each do |event| %>
+    <%= event.title %>
+  <% end %>
+</div>
+
+<div>
+  <b>Past Events</b> 
+  <% @pastevents.each do |event| %>
+    <%= event.title %>
+  <% end %>
+</div>
