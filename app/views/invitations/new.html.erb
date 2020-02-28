@@ -1,0 +1,17 @@
+<h1> New Invitation </h1>
+
+<%= form_for(@invitation) do |f| %>
+
+  <% if @invitation.errors.any? %>
+    <% @invitation.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  <% end %>
+
+  <%= f.collection_select(:invited_events_id, @list_of_current_users_events, :id, :title) %>  
+
+  <%= f.collection_select(:invitee_id, @list_of_users, :id, :username) %>
+
+  <%= f.submit "Create my invitation" %>
+
+<% end %>

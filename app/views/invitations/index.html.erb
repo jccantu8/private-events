@@ -1,0 +1,15 @@
+<h1>All Invitations</h1>
+
+<div>
+  <b>Future Invitations</b>
+  <% @sent_invitations.each do |invitation| %>
+    <%= invitation.title %>
+  <% end %>
+</div>
+
+<div>
+  <b>Past Invitations</b> 
+  <% @recieved_invitations.each do |invitation| %>
+    <%= invitation.title %>
+  <% end %>
+</div>

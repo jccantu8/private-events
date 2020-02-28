@@ -13,10 +13,10 @@ class User < ApplicationRecord
                          format: { with: /\A[a-zA-Z0-9]+\Z/, message: "Only allow letters and numbers" }
 
     def upcoming_events
-        self.invited_events.where("date >= ?", Time.current)
+        self.invited_events.where("date >= ? AND attending = 1", Time.current)
     end
 
     def previous_events
-        self.invited_events.where("date < ?", Time.current)
+        self.invited_events.where("date < ? AND attending = 1", Time.current)
     end
 end

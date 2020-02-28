@@ -1,0 +1,10 @@
+<h1> Update Invitation </h1>
+
+<%= form_for(@invitation) do |f| %>
+
+  <%= f.label "Attending?" %>
+  <%= f.check_box :attending %>  
+
+  <%= f.submit "Update the invitation" %>
+
+<% end %>
